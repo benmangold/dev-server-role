@@ -10,8 +10,9 @@ a role used by [benmangold/dev-server](https://github.com/benmangold/dev-server)
 Role Variables
 --------------
 
-git_username: git-user
-git_email: git-user@email.com
+git_username: git-user # username for git config
+
+git_email: email@email.com # email for git config
 
 Example Playbook
 ----------------
