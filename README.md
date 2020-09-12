@@ -16,8 +16,38 @@ git_email: git-user@email.com
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+playbook.yml
+```ansible
+---
+- name: Provision Ubuntu
+  hosts: all
+  gather_facts: yes
+  become: yes
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+  vars_files:
+    - ./variables.yml
+
+  tasks:
+    - name: Dev Env Install
+      import_role:
+        name: dev-server-role
+
+```
+
+requirements.yml
+```ansible
+---
+
+- src: https://github.com/benmangold/dev-server-role
+  version: v0.0.1
+
+```
+
+variables.yml
+```absible
+---
+
+git_username: benmangold
+git_email: benmangold@gmail.com
+
+```
