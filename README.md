@@ -5,10 +5,13 @@ ephemeral ubuntu development environment configs
 
 postgresql, docker, nodejs 12, oh-my-zsh
 
+a role used by [benmangold/dev-server](https://github.com/benmangold/dev-server)
+
 Role Variables
 --------------
 
-a role used by [benmangold/dev-server](https://github.com/benmangold/dev-server)
+git_username: git-user
+git_email: git-user@email.com
 
 Example Playbook
 ----------------
