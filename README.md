@@ -16,6 +16,14 @@ git_email: git-user@email.com
 Example Playbook
 ----------------
 
+```
+/ansible
+  playbook.yml
+  requirements.yml
+  variables.yml
+ 
+```
+
 playbook.yml
 ```ansible
 ---
