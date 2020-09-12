@@ -28,6 +28,7 @@ Example Playbook
 playbook.yml
 ```ansible
 ---
+
 - name: Provision Ubuntu
   hosts: all
   gather_facts: yes
