@@ -40,4 +40,4 @@ db_password: ubuntu
 docker_user: ubuntu
 
 git_username: git-user
-git_email: git-user@gmail.com
+git_email: git-user@email.com
