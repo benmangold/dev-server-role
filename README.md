@@ -47,7 +47,7 @@ variables.yml
 ```absible
 ---
 
-git_username: benmangold
-git_email: benmangold@gmail.com
+git_username: git-username
+git_email: email@email.com
 
 ```
