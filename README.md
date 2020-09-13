@@ -14,12 +14,13 @@ Role Variables
 git_username: git-user # username for git config
 
 git_email: email@email.com # email for git config
+
 ```
 
 Example Playbook
 ----------------
 
-```
+```fs
 /ansible
   playbook.yml
   requirements.yml
@@ -56,7 +57,7 @@ requirements.yml
 ```
 
 variables.yml
-```absible
+```ansible
 ---
 
 git_username: git-username
