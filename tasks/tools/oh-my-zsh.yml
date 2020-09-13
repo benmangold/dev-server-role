@@ -13,3 +13,7 @@
 - name: Install oh-my-zsh
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   become_user: "{{ user }}"
+
+- name: randomize zsh theme
+  shell: sed -i 's/robbyrussell/random/g' ~/.zshrc
+  become_user: "{{ user }}"
