@@ -3,7 +3,7 @@
 - name: Update and Prune Packages
   apt:
     update_cache: yes
-    upgrade: 'yes'
+    upgrade: yes
     autoremove: yes
     autoclean: yes
 

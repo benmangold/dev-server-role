@@ -1,5 +1,11 @@
 ---
-- hosts: localhost
-  remote_user: root
-  roles:
-    - dev-server-role
+- hosts: all
+  user: ubuntu
+  become: yes
+  gather_facts: yes
+
+  vars_files: 
+    - ../defaults/main.yml
+
+  tasks:
+    - import_tasks: ../tasks/main.yml

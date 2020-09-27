@@ -3,14 +3,16 @@
 - name: Ensure the PostgreSQL service is running
   service: name=postgresql state=started enabled=yes
 
+- name: Create postgres user
+  postgresql_user: name={{ db_user }} password={{ db_password }}
+  become_user: postgres
+
 - name: Create postgres database
-  become: true
   become_user: postgres
   postgresql_db:
     name: "{{ user }}"
 
 - name: Connect to ubuntu database, create ubuntu user, and grant access
-  become: true
   become_user: postgres
   postgresql_user:
     db: "{{ db_user }}"
