@@ -17,5 +17,5 @@
     creates: "/home/{{ user }}/.oh-my-zsh"
 
 - name: randomize zsh theme
-  shell: sed -i 's/robbyrussell/random/g' ~/.zshrc
+  shell: sed -i 's/robbyrussell/macovsky/g' ~/.zshrc
   become_user: "{{ user }}"
