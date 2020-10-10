@@ -80,6 +80,13 @@ resource "aws_security_group" "instance" {
         cidr_blocks = ["0.0.0.0/0"]
         description = "ingress from ssh"
     }
+    ingress {
+        from_port  = 3000
+        to_port = 3000
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+        description = "grafana dashboard http"
+    }
     egress {
         from_port = 0
         to_port = 0

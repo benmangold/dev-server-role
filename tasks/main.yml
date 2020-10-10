@@ -6,5 +6,6 @@
   - import_tasks: ../tasks/tools/postgres.yml
   - import_tasks: ../tasks/tools/oh-my-zsh.yml
   - import_tasks: ../tasks/tools/nodejs.yml
+  - import_tasks: ../tasks/tools/grafana.yml
   - import_tasks: ../tasks/filesystem.yml
   - import_tasks: ../tasks/smoke-test.yml

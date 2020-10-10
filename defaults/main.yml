@@ -42,3 +42,11 @@ docker_user: ubuntu
 
 git_username: git-user
 git_email: git-user@email.com
+
+deb:
+  grafana_repo_url: deb https://packagecloud.io/grafana/stable/debian/ jessie main
+  grafana_repo_key_url: https://packagecloud.io/gpg.key
+
+  grafana_repo_filename: grafana
+
+  grafana_init_file: /etc/default/grafana-server

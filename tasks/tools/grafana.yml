@@ -1,0 +1,30 @@
+---
+
+- name: Debian | Install dependencies
+  apt:
+   name: "{{ item }}"
+   state: present
+  with_items:
+   - apt-transport-https
+   - ufw
+   - gnupg2
+   - curl
+   - software-properties-common
+
+- name: Debian | Add GPG key
+  apt_key:
+    url: " https://packages.grafana.com/gpg.key" 
+    state: present
+    validate_certs: True
+
+- name: Debian | Add repository
+  apt_repository:
+    repo: deb https://packages.grafana.com/oss/deb stable main
+    state: present
+
+- name: Update apt and install grafana
+  apt: update_cache=yes name=grafana state=latest
+
+- name: Start grafana service
+  shell: systemctl enable --now grafana-server
+  become: true
