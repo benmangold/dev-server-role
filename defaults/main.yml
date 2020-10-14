@@ -1,9 +1,14 @@
 ---
-
+  
 apt_packages:
   - awscli
+  - bash
   - build-essential
+  - ca-certificates
+  - curl
+  - default-jre
   - git
+  - openssl
   - python3
   - ssh
   - ssh-client
@@ -14,8 +19,6 @@ apt_packages:
 docker_packages:
   - apt-transport-https
   - aptitude
-  - ca-certificates
-  - curl
   - software-properties-common
   - python3-pip
   - virtualenv
@@ -23,8 +26,6 @@ docker_packages:
 
 postgres_packages:
   - acl
-  - bash
-  - openssl
   - libpq-dev
   - libssl-dev
   - libssl-doc
@@ -34,11 +35,8 @@ postgres_packages:
 
 user: ubuntu
 
-db_user: ubuntu
 db_name: ubuntu
 db_password: ubuntu
-
-docker_user: ubuntu
 
 git_username: git-user
 git_email: git-user@email.com

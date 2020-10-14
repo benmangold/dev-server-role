@@ -3,6 +3,7 @@
   - import_tasks: ../tasks/packages.yml
   - import_tasks: ../tasks/tools/git.yml
   - import_tasks: ../tasks/tools/docker.yml
+  - import_tasks: ../tasks/tools/sbt.yml
   - import_tasks: ../tasks/tools/postgres.yml
   - import_tasks: ../tasks/tools/oh-my-zsh.yml
   - import_tasks: ../tasks/tools/nodejs.yml

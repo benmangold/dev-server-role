@@ -4,7 +4,7 @@
   service: name=postgresql state=started enabled=yes
 
 - name: Create postgres user
-  postgresql_user: name={{ db_user }} password={{ db_password }}
+  postgresql_user: name={{ user }} password={{ db_password }}
   become_user: postgres
 
 - name: Create postgres database
@@ -15,7 +15,7 @@
 - name: Connect to ubuntu database, create ubuntu user, and grant access
   become_user: postgres
   postgresql_user:
-    db: "{{ db_user }}"
+    db: "{{ user }}"
     name: "{{ db_name }}"
     password: "{{ db_password }}"
     encrypted: yes
