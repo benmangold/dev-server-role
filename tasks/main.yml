@@ -9,3 +9,4 @@
   - import_tasks: ../tasks/tools/nodejs.yml
   - import_tasks: ../tasks/filesystem.yml
   - import_tasks: ../tasks/smoke-test.yml
+  - import_tasks: ../tasks/tools/waypoint.yml
