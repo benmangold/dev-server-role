@@ -2,17 +2,17 @@
 
 - name: Install hello-node smoke test
   git:
-    repo: 'https://github.com/benmangold/hello-node.git'
-    dest: /home/{{ user }}/github/hello-node
-    version: dev-server-pg
+    repo: 'https://github.com/benmangold/tower-of-hanoi.git'
+    dest: /home/{{ user }}/github/tower-of-hanoi
+    version: dev
   become_user: "{{ user }}"
 
-- name: Install smoke test dependencies
-  shell: npm i
+- name: Install dependencies
+  shell: npm i; npm i -g pm2
   args:
-    chdir: /home/{{ user }}/github/hello-node
+    chdir: /home/{{ user }}/github/tower-of-hanoi
     
-- name: Smoke test nodejs pg connection
-  shell: npm run start
+- name: Build and start
+  shell: npm run build; npx pm2 start server.js
   args:
-    chdir: /home/{{ user }}/github/hello-node
+    chdir: /home/{{ user }}/github/tower-of-hanoi.js

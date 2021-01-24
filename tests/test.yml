@@ -1,6 +1,7 @@
 ---
-- hosts: all
-  user: ubuntu
+- hosts: localhost
+  user: bm
+  connection: local
   become: yes
   gather_facts: yes
 

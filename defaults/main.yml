@@ -33,10 +33,10 @@ postgres_packages:
   - postgresql-contrib
   - python3-psycopg2
 
-user: ubuntu
+user: bm
 
-db_name: ubuntu
-db_password: ubuntu
+db_name: bm
+db_password: bm
 
-git_username: git-user
-git_email: git-user@email.com
+git_username: benmangold
+git_email: benmangold@gmail.com
