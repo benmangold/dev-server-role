@@ -5,7 +5,7 @@
     #  - import_tasks: ../tasks/tools/docker.yml
     #  - import_tasks: ../tasks/tools/sbt.yml
     # - import_tasks: ../tasks/tools/postgres.yml
-  - import_tasks: ../tasks/tools/oh-my-zsh.yml
+    # - import_tasks: ../tasks/tools/oh-my-zsh.yml
   - import_tasks: ../tasks/tools/nodejs.yml
   - import_tasks: ../tasks/filesystem.yml
   - import_tasks: ../tasks/smoke-test.yml
