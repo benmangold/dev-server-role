@@ -22,5 +22,3 @@
     name: "{{ user }}"
     group: docker
 
-- name: Ensure the Docker service is running
-  service: name=docker state=started enabled=yes
